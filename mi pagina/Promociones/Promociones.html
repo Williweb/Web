@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Salvador Go!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #CCFFFF;
+        }
+
+        footer {
+            background-color: #6600a1;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            position: relative;
+        }
+
+        .custom-gradient-navbar {
+            background: linear-gradient(to left, #6600a1, #cc66ff);
+        }
+
+        .navbar-brand img {
+            width: 180px;
+            height: auto;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+
+        .hero-section {
+            background: url('https://i.ibb.co/8g9kwmJR/Up-IMAGE.png') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* Estilos para el Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-gradient-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.ibb.co/nMB384r5/LOGUITO.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Main/Plantilla2%20El%20salvador%20go.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Tours/horario%20y%20tours.html">Calendarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Experiencias/Experiencias.html">Experiencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/Desafio%202/Promociones.html">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Sitios%20turisticos%20importantes/Sitios.html">Sitios más visitados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Forms/formulario%20de%20contacto.html">Contactos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section"></section>
+
+    <div class="container mt-5">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold"><i class="fas fa-tags"></i> ¡Descubrí las mejores promociones del momento!</h2>
+                <p class="text-muted">Lugares increíbles a precios accesibles para disfrutar en familia o con amigos.</p>
+            </div>
+        </div>
+
+        <div class="row" id="Promociones">
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('cascadaDescription')">
+                            <i class="fas fa-droplet"></i> Cascadas de Don Juan
+                        </h5>
+                        <div id="cascadaDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox1">
+                                <img src="Cascadadon.jpeg" alt="Cascadas de Don Juan" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox7">
+                                <img src="las-cascadas-de-don-juan.jpg" alt="Cascadas de Don Juan" class="img-fluid mb-3">
+                            </a>
+                            <p>Ubicadas en La Libertad, este lugar ofrece pozas naturales, senderos y cascadas. En abril hay entrada con descuento: $2 por persona y parqueo gratis.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="http://youtube.com/embed/5Alm8mvrYEo" title="Video promocional" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('termalesDescription')">
+                            <i class="fas fa-hot-tub"></i> Termos del Río
+                        </h5>
+                        <div id="termalesDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox2">
+                            <img src="termos-del-rio-3.jpg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                            </a>
+                            <a href="#lightbox8">
+                                <img src="unnamed.jpg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                                </a>
+                            <p>Ubicado en Santa Tecla, ofrece aguas termales, áreas verdes y recreativas. Promo: 4 personas por $10 durante abril.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/xSGZJvdySkw" title="Video promocional" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('hotelDescription')">
+                            <i class="fas fa-hotel"></i> Hotel Decameron Salinitas
+                        </h5>
+                        <div id="hotelDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox3">
+                            <img src="royal-decameron-salinitas.jpg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                            </a>
+                            <a href="#lightbox9">
+                                <img src="hotel-3.jpg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                                </a>
+                            <p>Resort todo incluido en Sonsonate. Promo: 20% de descuento del 20 de abril al 19 de junio.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/7oMWOGsZRZc" title="Video promocional" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('cerroVerdeDescription')">
+                            <i class="fas fa-mountain"></i> Cerro Verde
+                        </h5>
+                        <div id="cerroVerdeDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox4">
+                            <img src="images (1).jpeg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                            </a>
+                            <a href="#lightbox10">
+                                <img src="cerro-verde-1.jpg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                                </a>
+                            <p>Senderos, miradores y vistas a volcanes. Ideal para caminatas y naturaleza. Entrada gratuita con Buses Alegres.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/iUT5BR3Lfaw" title="Cerro Verde" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('amapulapaDescription')">
+                            <i class="fas fa-water"></i> Parque Amapulapa
+                        </h5>
+                        <div id="amapulapaDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox5">
+                            <img src="Amapulapa2.jpg" alt="Parque Amapulapa" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox11">
+                                <img src="amapulapa-3.jpg" alt="" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                                </a>
+                            <p>Cascadas, piscinas y áreas para picnic en San Vicente. Accesible mediante tours del ISTU.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/Zaeh9n3xM_c" title="Amapulapa" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('espinoDescription')">
+                            <i class="fas fa-umbrella-beach"></i> Playa El Espino
+                        </h5>
+                        <div id="espinoDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox6">
+                            <img src="images.jpeg" alt="Parque Amapulapa" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox12">
+                                <img src="el-espino-1.jpg" alt="Parque Amapulapa" class="img-fluid mb-3">
+                                </a>
+                            <p>Playa de arena blanca en Usulután con gastronomía local y paseos en lancha. Accesible por tours ISTU.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/jpGz_ElbStc" title="Playa El Espino" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('tuncoDescription')">
+                            <i class="fas fa-umbrella-beach"></i> Playa El Tunco
+                        </h5>
+                        <div id="tuncoDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox13">
+                                <img src="tunco.jpg" alt="Playa El Tunco" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox14">
+                                <img src="tun.jpg" alt="Playa El Tunco" class="img-fluid mb-3">
+                            </a>
+                            <p>Uno de los destinos más populares para surfistas. Durante abril, 10% de descuento en hospedajes afiliados y bebidas 2x1 en restaurantes locales los fines de semana.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/9VwaHZJlsxo" title="Playa El Tunco" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('boqueronDescription')">
+                            <i class="fas fa-tree"></i> Parque Nacional El Boquerón
+                        </h5>
+                        <div id="boqueronDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox15">
+                                <img src="el-boqueron-1.jpg" alt="El Boquerón" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox16">
+                                <img src="Boquerón_and_Boqueróncito.jpg" alt="El Boquerón" class="img-fluid mb-3">
+                            </a>
+                            <p>Disfrutá de un clima fresco, senderos y vistas al cráter. Entrada gratis para niños y adultos mayores durante todo abril.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/rmISiEqv_iQ" title="Parque El Boquerón" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('coatepequeDescription')">
+                            <i class="fas fa-water"></i> Lago de Coatepeque
+                        </h5>
+                        <div id="coatepequeDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox17">
+                                <img src="lago-de-coatepeque-recuperado.webp" alt="Lago Coatepeque" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox18">
+                                <img src="coate.jpeg" alt="Lago Coatepeque" class="img-fluid mb-3">
+                            </a>
+                            <p>Ideal para relajarse y practicar deportes acuáticos. Descuento del 15% en alquiler de kayaks y jetski si reservas en línea.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/z0N7YN7TxIs" title="Lago de Coatepeque" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title" onclick="toggleDescription('balboaDescription')">
+                            <i class="fas fa-leaf"></i> Parque Natural Balboa
+                        </h5>
+                        <div id="balboaDescription" class="card-text" style="display: none;">
+                            <a href="#lightbox21">
+                                <img src="balboa-min-1024x777.jpg" alt="Parque Balboa" class="img-fluid mb-3">
+                            </a>
+                            <a href="#lightbox22">
+                                <img src="parque-balboa.jpg" alt="Parque Balboa" class="img-fluid mb-3">
+                            </a>
+                            <p>Un espacio verde ideal para picnic y caminatas. Promo: Entrada 2x1 para grupos familiares y tours guiados con 25% de descuento.</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/nc1QaFhrHcA" title="Parque Balboa" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        function toggleDescription(id) {
+            const description = document.getElementById(id);
+            description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+
+    <section class="my-5">
+        <div class="container my-5">
+            <h3 class="text-center">Mapa de Sitios Turísticos</h3>
+            <div class="text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125987.40830340543!2d-89.2472887!3d13.6929404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330d7b0f91b05%3A0x1d142937d1d87ee6!2sEl%20Salvador!5e0!3m2!1ses!2ssv!4v1713893046190!5m2!1ses!2ssv"
+                width="640" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+            </div>
+          </div>          
+<div id="lightbox1" class="lightbox">
+    <a href="#">
+        <img src="Cascadadon.jpeg" alt="Cascadas de Don Juan">
+    </a>
+</div>
+
+<div id="lightbox2" class="lightbox">
+    <a href="#">
+        <img src="termos-del-rio-3.jpg" alt="Termos del Río">
+    </a>
+</div>
+
+<div id="lightbox3" class="lightbox">
+    <a href="#">
+        <img src="royal-decameron-salinitas.jpg" alt="Hotel Decameron Salinitas">
+    </a>
+</div>
+
+<div id="lightbox4" class="lightbox">
+    <a href="#">
+        <img src="images (1).jpeg" alt="Cerro Verde">
+    </a>
+</div>
+
+<div id="lightbox5" class="lightbox">
+    <a href="#">
+        <img src="Amapulapa2.jpg" alt="Parque Amapulapa">
+    </a>
+</div>
+<div id="lightbox6" class="lightbox">
+    <a href="#">
+        <img src="images.jpeg" alt="Playa El Espino">
+    </a>
+</div>
+<div id="lightbox7" class="lightbox">
+    <a href="#">
+        <img src="las-cascadas-de-don-juan.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox8" class="lightbox">
+    <a href="#">
+        <img src="unnamed.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox9" class="lightbox">
+    <a href="#">
+        <img src="hotel-3.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox10" class="lightbox">
+    <a href="#">
+        <img src="cerro-verde-1.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox11" class="lightbox">
+    <a href="#">
+        <img src="amapulapa-3.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox12" class="lightbox">
+    <a href="#">
+        <img src="el-espino-1.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox13" class="lightbox">
+    <a href="#">
+        <img src="tunco.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox14" class="lightbox">
+    <a href="#">
+        <img src="tun.jpeg " alt="">
+    </a>
+</div>
+<div id="lightbox15" class="lightbox">
+    <a href="#">
+        <img src="el-boqueron-1.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox16" class="lightbox">
+    <a href="#">
+        <img src="Boquerón_and_Boqueróncito.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox17" class="lightbox">
+    <a href="#">
+        <img src="lago-de-coatepeque-recuperado.webp" alt="">
+    </a>
+</div>
+<div id="lightbox18" class="lightbox">
+    <a href="#">
+        <img src="coate.jpeg" alt="">
+    </a>
+</div><div id="lightbox19" class="lightbox">
+    <a href="#">
+        <img src="balboa-min-1024x777.jpg" alt="">
+    </a>
+</div>
+<div id="lightbox20" class="lightbox">
+    <a href="#">
+        <img src="parque-balboa.jpg" alt="">
+    </a>
+</div>
+    <script>
+        function toggleDescription(id) {
+            const description = document.getElementById(id);
+            description.style.display = (description.style.display === 'none' || description.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 El Salvador Go! - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

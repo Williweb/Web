@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Salvador Go! - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #CCFFFF;
+        }
+
+        footer {
+            background-color: #474b4e;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            position: relative;
+        }
+
+        .custom-gradient-navbar {
+            background: linear-gradient(to left, #6600a1, #cc66ff);
+        }
+
+        .navbar-brand img {
+            width: 180px;
+            height: auto;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+
+        .hero-section {
+            background: url('https://i.ibb.co/8g9kwmJR/Up-IMAGE.png') no-repeat center center;
+            background-size: cover;
+            height: 300px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .contact-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            color: #6600a1;
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark custom-gradient-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.ibb.co/nMB384r5/LOGUITO.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Main/Plantilla2%20El%20salvador%20go.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Tours/horario%20y%20tours.html">Calendarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Experiencias/Experiencias.html">Experiencias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Promociones/Promociones.html">Promociones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Sitios%20turisticos%20importantes/Sitios.html">Sitios más visitados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file:///C:/Users/soray/OneDrive/Escritorio/PROYECTO%20WEB%20ES%20GO/Forms/formulario%20de%20contacto.html">Contactos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section"></section>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h2>Contáctanos</h2>
+                    <p>¡Estamos listos para ayudarte a planificar tu aventura en El Salvador! Completa el formulario a continuación y nos pondremos en contacto contigo pronto.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número de teléfono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="destination" class="form-label">Destino de Interés</label>
+                            <select class="form-select" id="destination">
+                                <option selected>Selecciona un destino</option>
+                                <option value="san-salvador">San Salvador</option>
+                                <option value="santa-ana">Santa Ana</option>
+                                <option value="el-tunco">El Tunco</option>
+                                <option value="suchitoto">Suchitoto</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #6600a1; border: none;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-info">
+                    <h5>Información de Contacto</h5>
+                    <p><i class="fas fa-phone-alt"></i> Teléfono: 7953-5199</p>
+                    <p><i class="fas fa-envelope"></i> Correo: bjperezamaya2606@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección: San Salvador, El Salvador</p>
+                    <h5>Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#" class="fab fa-facebook"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+       <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 El Salvador Go! - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+                <a href="https://www.twitter.com" target="_blank"class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
